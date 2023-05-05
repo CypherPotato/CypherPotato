@@ -1,0 +1,33 @@
+<include name="component/header"></include>
+<style>
+    #content>h1,
+    #content>h2 {
+        margin-top: 50px;
+    }
+
+    #title {
+        font-size: 38px;
+        margin-top: 80px;
+    }
+</style>
+<a style="display: block; padding-block: 1rem;" href="../">
+    &larr; Voltar ao diretório
+</a>
+<h1 id="title" style="border-bottom: 1px solid #242424; padding-block: 2rem 1rem;">
+</h1>
+<div id="content">
+</div>
+<script>
+    let link = window.query.link;
+    for (const post of blogPosts) {
+        if (post.link == link) {
+            query("#title").innerText = post.title;
+        }
+    }
+    fetch("/blog-posts/" + link)
+        .then(res => res.text())
+        .then(txt => {
+            query("#content").innerHTML = new showdown.Converter().makeHtml(txt);
+            Prism.highlightAll();
+        });
+</script>
