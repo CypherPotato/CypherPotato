@@ -1,5 +1,12 @@
 var blogPosts = [
     {
+        title: "Ponteiros ou referências? Qual usar?",
+        link: "pointers-refs.md",
+        published: "5 de maio, 2023",
+        color: "#6FCD03",
+        tags: ["c#", "low-level"]
+    },
+    {
         title: "É seguro alternar byte com XOR em uma criptografia unidirecional?",
         link: "xor-cipher.md",
         published: "27 de abril, 2023",
