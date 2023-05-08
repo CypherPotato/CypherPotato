@@ -1,5 +1,12 @@
 var blogPosts = [
     {
+        title: "Descomplicando o Path.Combine",
+        link: "normalizando-path-combine.md",
+        published: "8 de maio, 2023",
+        color: "#1381FF",
+        tags: ["c#"]
+    },
+    {
         title: "Ponteiros ou referências? Qual usar?",
         link: "pointers-refs.md",
         published: "5 de maio, 2023",
