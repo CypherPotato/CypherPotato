@@ -61,13 +61,11 @@
 </div>
 <script>
     blogPosts.forEach(post => {
+        post.tags = post.tags.join(', ');
         query("#blog-posts").innerHTML += /*html*/`
-            <a href="/blog-post?link=${post.link}" class="blog-post">
-                <div role="color" style="background-color: ${post.color}"></div>
-                <h1>${post.title}</h1>
-                <div role="publish-date">${post.published}</div>
-                <div role="tags">${post.tags.join(', ')}</div>
-            </a>
+            <include name="component/blog-post">
+                ${JSON.stringify(post)}    
+            </include>
         `;
     });
 </script>

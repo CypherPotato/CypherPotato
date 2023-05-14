@@ -1,5 +1,12 @@
 var blogPosts = [
     {
+        title: "Armazenamento de Cache com Sisk",
+        link: "armazenamento-temp.md",
+        published: "14 de maio, 2023",
+        color: "#6E4F2E",
+        tags: ["c#", "cache", "sisk"]
+    },
+    {
         title: "Descomplicando o Path.Combine",
         link: "normalizando-path-combine.md",
         published: "8 de maio, 2023",

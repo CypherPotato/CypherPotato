@@ -1,5 +1,6 @@
 var __isNavigating = false;
 var objsList = [];
+var componentCache = [];
 
 const query = (q) => document.querySelector(q);
 const queryAll = (q) => document.querySelectorAll(q);
@@ -55,27 +56,36 @@ function fetchComponents() {
         __isNavigating = false;
         return;
     }
-    exts.forEach(e => {
+    exts.forEach(async e => {
         let name = e.getAttribute("name");
-        let onload = e.getAttribute("onload");
-        fetch(window.location.origin + "/view/" + name + ".html")
-            .then(res => {
-                if (res.ok) {
-                    return res.text();
-                } else {
-                    throw new Error(`Cannot fetch include ${name}.`);
-                }
-            })
-            .then(text => {
-                if (e.parentNode != null) {
-                    e.outerHTML = text;
-                    if (onload != "") {
-                        eval(onload);
+        let params = e.innerHTML;
+        let componentUrl = window.location.origin + "/view/" + name + ".html";
+        let text = "";
+        if (componentCache[componentUrl] == undefined) {
+            text = await fetch(componentUrl)
+                .then(res => {
+                    if (res.ok) {
+                        return res.text();
+                    } else {
+                        throw new Error(`Cannot fetch include ${name}.`);
                     }
-                }
-                fetchElements();
-                fetchComponents();
-            });
+                });
+            componentCache[componentUrl] = text;
+        } else {
+            text = componentCache[componentUrl];
+        }
+
+        if (params != "" && params != null) {
+            let paramsObj = JSON.parse(params);
+            for (const [key, value] of Object.entries(paramsObj)) {
+                text = text.replaceAll('@' + key, value);
+            }
+        }
+        if (e.parentNode != null) {
+            e.outerHTML = text;
+        }
+        fetchElements();
+        fetchComponents();
     });
 }
 

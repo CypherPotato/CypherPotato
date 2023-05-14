@@ -32,7 +32,7 @@ pre > code:not([class]) {
 code:not([class]) {
     font-size: 13px;
     background-color: #1f1f1f;
-    padding: 3px 5px;
+    padding: 0 5px;
     display: inline-block;
 }
 
