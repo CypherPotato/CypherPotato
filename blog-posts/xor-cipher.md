@@ -51,12 +51,31 @@ Temos `inputBytes`, com 1024 bytes, e temos `key` com 32 bytes. Ao criarmos uma 
 
 A Cifra de XOR funciona muito bem porque é reversível em uma operação bitwise simples. Podemos encriptar ou decriptar usando a mesma operação. Isso ocorre porque ela é uma [função involutiva](https://pt.wikipedia.org/wiki/Involu%C3%A7%C3%A3o_(matem%C3%A1tica)), ou seja, sua própria aplicação é a reversão de seu resultado.
 
-| A | B | Xor | Or | And |
-| - | - | --- | -- | --- |
-| 0 | 0 | 0   | 0  | 1   |
-| 1 | 0 | 1   | 1  | 0   |
-| 1 | 1 | 0   | 1  | 1   |
-| 0 | 1 | 1   | 1  | 0   |
-| 1 | 1 | 0   | 1  | 1   |
+<table>
+    <thead>
+        <td>A</td>
+        <td>B</td>
+        <td>XOR</td>
+        <td>OR</td>
+        <td>AND</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+        </tr>
+        <tr>
+            <td>1</td><td>0</td><td>1</td><td>1</td><td>0</td>
+        </tr>
+        <tr>
+            <td>1</td><td>1</td><td>0</td><td>1</td><td>1</td>
+        </tr>
+        <tr>
+            <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td>
+        </tr>
+        <tr>
+            <td>1</td><td>1</td><td>0</td><td>1</td><td>1</td>
+        </tr>
+    </tbody>
+</table>
 
 Em suma, a operação XOR é barata, eficiente e se usada de forma correta poderá ser sua melhor aliada na criptografia. A segurança depende exclusivamente da segurança da chave gerada e aplicada em sua função, e claro, do quão "secreta" ela também é.
