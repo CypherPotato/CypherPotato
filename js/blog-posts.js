@@ -22,7 +22,7 @@ var blogPosts = [
     },
     {
         title: "É seguro alternar byte com XOR em uma criptografia unidirecional?",
-        link: "xor-cipher.md",
+        link: "xor-cipher.md?v=1",
         published: "27 de abril, 2023",
         color: "#77216B",
         tags: ["q&a", "criptografia"]
