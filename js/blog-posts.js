@@ -1,5 +1,12 @@
 var blogPosts = [
     {
+        title: "Validações de forma simples e eficiente",
+        link: "validations.md",
+        published: "15 de junho, 2023",
+        color: "#069157",
+        tags: ["c#", "validations"]
+    },
+    {
         title: "Armazenamento de Cache com Sisk",
         link: "armazenamento-temp.md",
         published: "14 de maio, 2023",
