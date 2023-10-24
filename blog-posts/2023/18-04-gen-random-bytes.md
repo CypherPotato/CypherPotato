@@ -1,3 +1,13 @@
+<!--
+{
+    "title": "Geração de bytes aleatórios do zero: ponteiros e conceito",
+    "link": "2023/18-04-gen-random-bytes.md",
+    "published": "18 de abril, 2023",
+    "color": "#6DE0C4",
+    "tags": ["c#", "low-level"]
+}
+-->
+
 Vou mostrar para vocês como fiz meu próprio gerador de bytes aleatórios que permite a utilização de uma semente em seu "motor". Escrevi o código em C# e utilizei código não seguro para alcançar o melhor desempenho possível.
 
 Este algorítmo usa o [Geradores congruentes lineares](https://pt.wikipedia.org/wiki/Geradores_congruentes_lineares) como algoritmo para geração dos números aleatórios.
@@ -57,7 +67,7 @@ unsafe static void Main(string[] args)
 ```
 
 O resultado será este:
- 
+
 ```
              0 : 20 DB 96 51 0C C7 82 3D F8 B3 6E 29 E4 9F 5A 15
              1 : 93 C1 EF 1D 4B 79 A7 D5 03 31 5F 8D BB E9 17 45

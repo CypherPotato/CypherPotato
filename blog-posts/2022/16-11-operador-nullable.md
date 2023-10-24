@@ -1,3 +1,13 @@
+<!--
+{
+  "title": "O que significa null! em C#, qual o proposito real dessa junção na atribuição?",
+  "link": "2022/16-11-operador-nullable.md",
+  "published": "16 de novembro, 2022",
+  "color": "#011C54",
+  "tags": ["q&a", "c#", "nullable"]
+}
+-->
+
 O que significa null! em C#, qual o proposito real dessa junção na atribuição?
 
 ## Pergunta:

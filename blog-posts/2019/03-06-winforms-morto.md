@@ -1,3 +1,12 @@
+<!--
+{
+  "title": "O Windows Forms está morto?",
+  "published": "3 de julho, 2019",
+  "color": "#23BF5B",
+  "tags": ["opinião", "q&a", ".net", "winforms"]
+}
+-->
+
 ## Pergunta:
 
 O Windows Forms já está a aproximadamente 17 anos no mercado desde o .NET Framework 1.0 lançado em 2002, e ainda permanece uma das principais limitações de funcionar apenas em Windows, como o próprio nome sugere, e agora com a vinda de outras interfaces que sucederam ele como o WPF e o UWP isso parece ainda mais certo.

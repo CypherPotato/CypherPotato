@@ -1,0 +1,16 @@
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+IndexIgnore *
+RewriteEngine On
+
+RewriteRule ^(vendor/|vendor$) index.php [L]
+RewriteRule ^(lib/|lib$) index.php [L]
+RewriteRule ^(view/|view$) index.php [L]
+RewriteRule ^(view/|view$) index.php [L]
+RewriteRule (^\.|\/\.) index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^ index.php [L]

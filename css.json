@@ -1,0 +1,8 @@
+{
+    "merge": true,
+    "pretty": false,
+    "inputDirectories": [
+        "./style"
+    ],
+    "outputFile": "./dist/app.css"
+}

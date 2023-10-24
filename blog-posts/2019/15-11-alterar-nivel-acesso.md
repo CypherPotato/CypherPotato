@@ -1,3 +1,13 @@
+<!--
+{
+    "title": "Como alterar nível de acesso de propriedade em uma herança?",
+    "link": "2019/15-11-alterar-nivel-acesso.md",
+    "published": "15 de novembro, 2019",
+    "color": "#7E0525",
+    "tags": ["q&a", "c#"]
+}
+-->
+
 ## Pergunta:
 
 Eu tenho uma classe que quando herdada quero que um de seus atributos de público se torne privado, para que o usuário não tenho acesso ao uso dessa variável nessa classe, mas não sei como fazer isso.
@@ -6,7 +16,7 @@ Eu tenho uma classe que quando herdada quero que um de seus atributos de públic
 public class Pai {
     public string Exemplo {get; set;}
 }
-    
+
 public class Filho : Pai {
     private string Exemplo {get; set;}
 }
@@ -43,7 +53,7 @@ public class Pai {
 
 public class Filho : Pai {
     private new string Exemplo {get => "Teste";}
-    
+
     public string ExemploHerdado { get {
             return this.Exemplo; // Acessa Pai.Exemplo, pois ele é público e o método também é
         }
@@ -54,10 +64,10 @@ public static void Main()
 {
     Pai x = new Pai();
     x.Exemplo = "Olá, mundo";
-    
+
     Filho y = new Filho();
     y.Exemplo = "Foo, bar";
-    
+
     Console.WriteLine(x.Exemplo);
     Console.WriteLine(y.Exemplo);
     Console.WriteLine(y.ExemploHerdado);
@@ -70,7 +80,7 @@ No exemplo acima, `y.Exemplo` chama o método `Pai.Exemplo` porque o que foi def
 
 Quando chamo `Filho.ExemploHerdado`, eu retorno a propriedade redeclarada e privada `Exemplo`, com o valor que defini.
 
-Causaria confusão e iria infringir a semântica de segurança de classes se isso fosse possível. Você não gostaria de declarar um método privado e que o mesmo fosse utilizado como público em uma classe herdeira. O mesmo acontece ao contrário. 
+Causaria confusão e iria infringir a semântica de segurança de classes se isso fosse possível. Você não gostaria de declarar um método privado e que o mesmo fosse utilizado como público em uma classe herdeira. O mesmo acontece ao contrário.
 
 É bom que exista essa obrigatoriedade porque é um contrato indicando que você deverá utilizar o método daquele jeito em que foi originalmente declarado, e não de outra forma de implementação em que for utilizado.
 

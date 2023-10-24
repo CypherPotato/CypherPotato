@@ -1,9 +1,19 @@
+<!--
+{
+    "title": "Descomplicando o Path.Combine",
+    "link": "2023/08-05-normalizando-path-combine.md",
+    "published": "8 de maio, 2023",
+    "color": "#1381FF",
+    "tags": ["c#"]
+}
+-->
+
 Em algum momento você já tentou concatenar dois diretórios e o resultado não foi o que você queria? Vou te dar uma solução aqui.
 
 Desde cedo já ouvia que concatenar dois caminhos "na mão" nunca era a melhor solução. A chance de sair um caminho inválido,
 errado ou quebrado era muito alta quando você não tinha muito controle do que estavam nestes caminhos.
 
-Então veio a solução: o método [System.IO.Path.Combine](https://learn.microsoft.com/pt-br/dotnet/api/system.io.path.combine?view=net-7.0), mas 
+Então veio a solução: o método [System.IO.Path.Combine](https://learn.microsoft.com/pt-br/dotnet/api/system.io.path.combine?view=net-7.0), mas
 a gente nunca usou ele direito.
 
 Vamos supor que você quer concatear o caminho `C:/Users/Admin/` com `/Downloads/myfile.txt`. Parece simples não é? Vamos testar:
@@ -84,7 +94,7 @@ string Combine(params string[] paths)
         );
         tokens.AddRange(pathIdentities);
     }
-    
+
     ...
 }
 ```
@@ -238,7 +248,7 @@ static void Main(string[] args)
 
 /*
     Saída:
-    
+
     NormalizedCombine : D:/archives/ + \2001\media\file.img = D:\archives\2001\media\file.img
     IO.Path.Combine   : D:/archives/ + \2001\media\file.img = \2001\media\file.img
 

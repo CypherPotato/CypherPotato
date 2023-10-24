@@ -1,6 +1,16 @@
+<!--
+{
+    "title": "Ponteiros ou referências? Qual usar?",
+    "link": "2023/05-05-pointers-refs.md",
+    "published": "5 de maio, 2023",
+    "color": "#6FCD03",
+    "tags": ["c#", "low-level"]
+}
+-->
+
 Quando devemos usar ponteiros e quando devemos usar referências?
 
-Em uma recente discussão no [Stack Overflow em Português](https://pt.stackoverflow.com/questions/581817/quando-usar-ponteiros-e-quando-usar-refer%c3%aancias), estava questionando o uso destas duas tecnologias que são relativamente idênticas. 
+Em uma recente discussão no [Stack Overflow em Português](https://pt.stackoverflow.com/questions/581817/quando-usar-ponteiros-e-quando-usar-refer%c3%aancias), estava questionando o uso destas duas tecnologias que são relativamente idênticas.
 
 Vamos imaginar este trecho de código:
 
@@ -68,4 +78,3 @@ Quando usamos referências, estamos lidando com um ambiente seguro, pois na refe
 Referências são por padrão `in/out`. Maniero também explicou os operadores in, out e ref [aqui](https://pt.stackoverflow.com/a/82632/24529).
 
 Em alguns casos, também podemos optar pela utilação de `Span`, que é um "array de ponteiros gerenciados por referência", um `void**` seguro de usar.
-

@@ -1,3 +1,13 @@
+<!--
+{
+    "title": "Como checar apenas com CSS se um input está preenchido?",
+    "link": "2022/22-04-verificar-css-preenchido.md",
+    "published": "22 de abril, 2022",
+    "color": "#E5497F",
+    "tags": ["q&a", "css", "html"]
+}
+-->
+
 É possível fazer um seletor css que selecione input type="text" que tenham um valor inserido? Além disso, é possível para inputs que não tenham valor inserido?
 
 Observação: sem uso de Javascript. Apenas HTML + CSS.

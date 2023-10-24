@@ -1,3 +1,13 @@
+<!--
+{
+    "title": "É seguro alternar byte com XOR em uma criptografia unidirecional?",
+    "link": "2023/27-04-xor-cipher.md?v=1",
+    "published": "27 de abril, 2023",
+    "color": "#77216B",
+    "tags": ["q&a", "criptografia"]
+}
+-->
+
 ## Pergunta:
 
 Eu tenho um vetor de bytes `a`, e um segredo que considero seguro, do mesmo tamanho de `a`, chamado de `k`, e estou cogitando utilizar XOR em `a`, onde ocorre na mesma posição de `k`, para obter um vetor criptograficamente seguro.
@@ -40,7 +50,7 @@ Consideramos o pseudo-código abaixo:
 byte[] inputBytes = ... // 1024 bytes
 byte[] derivedBytes = Rfc2898DeriveBytes.Pbkdf2(
     key,
-    salt, 
+    salt,
     10000,
     HashAlgorithmName.SHA256,
     inputBytes.Length);

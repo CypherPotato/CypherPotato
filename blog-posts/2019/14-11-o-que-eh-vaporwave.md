@@ -1,3 +1,13 @@
+<!--
+{
+  "title": "O que é um Vaporwave?",
+  "link": "2019/14-11-o-que-eh-vaporwave.md",
+  "published": "14 de novembro, 2019",
+  "color": "#942684",
+  "tags": ["q&a", "terminologia"]
+}
+-->
+
 Não existe uma regra específica para qualificar um produto como Vaporware, e eu vou explicar o porquê.
 
 Vamos começar com sua definição: _vaporware_ é aquele lançamento nunca lançado. Normalmente você nunca associa um aplicativo à um Vaporware porque o mesmo **nem existe**, ou se existe, ficou travado num beta eterno e nunca mais saiu da fase de homologação (isso se teve homologação).
