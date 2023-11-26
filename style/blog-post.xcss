@@ -18,17 +18,19 @@
     display: block;
     color: #111;
     text-decoration: none !important;
-    opacity: .6;
     margin-bottom: 30px;
-    padding-left: 15px;
-    transition: .2s ease-in-out;
+    padding: 2px 15px 15px 15px;
+    box-shadow: 0 4px 16px 0 #00000000;
+    border-radius: 8px;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     & :hover {
-        opacity: 1;
+        box-shadow: 0 4px 16px 0 #00000033;
 
         > [role=color] {
             filter: grayscale(0);
             opacity: 1;
+            left: -15px;
         }
 
         > [role=tags] {
@@ -36,16 +38,27 @@
         }
     }
 
+    & :active {
+        box-shadow: 0 4px 8px 0 #00000053;
+        opacity: .75;
+
+        > [role=color] {
+            left: -10px;
+            opacity: .75;
+        }
+    }
+
     > [role=color] {
         position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
+        left: -25px;
+        top: 50%;
+        height: 60%;
         width: 5px;
         border-radius: 10px;
-        opacity: .5;
+        opacity: 0;
         filter: grayscale(.3);
-        transition: .2s ease-in-out;
+        translate: 0 -50%;
+        transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     > .contents {
@@ -72,7 +85,7 @@
 
     > .tags > div {
         display: inline-block;
-        background-color: #ddd;
+        background-color: #eee;
         color: #444;
         padding: 0px 5px;
         font-size: .8rem;

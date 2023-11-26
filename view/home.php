@@ -3,6 +3,20 @@
 
 <?= render_view('component.head', ['title' => 'Página Inicial']) ?>
 
+<?php
+
+function sanitize_html($S)
+{
+    preg_match_all('/\>\s*([^<]+)\</m', $S, $matches);
+    $s = "";
+    foreach ($matches[1] as $match) {
+        $s .= $match . " ";
+    }
+    return $s;
+}
+
+?>
+
 <body>
     <main>
         <?= render_view('component.header') ?>
@@ -76,7 +90,10 @@
                         <span><?= $post["metadata"]->published ?></span>
                     </div>
                     <div class="contents">
-                        <?= $post["contents"] ?>...
+                        <?php
+                        $p = new Parsedown();
+                        echo sanitize_html($p->text($post["contents"]));
+                        ?>...
                     </div>
                     <div class="tags">
                         <?php foreach ($post["metadata"]->tags as $tag) : ?>
