@@ -1,0 +1,73 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    margin: 2em;
+}
+
+body > main {
+    display: grid;
+    grid-template-columns: .2fr .8fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+#self-img {
+    display: block;
+    width: 100%;
+    border-radius: 999px;
+    outline: 8px solid white;
+}
+
+a {
+    color: #5e5ea5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4a4aa5;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+li + li {
+    margin-top: .3em;
+}
+
+p,
+li,
+h3,
+a {
+    line-height: 1.5;
+    text-shadow: 0 1px 0 white;
+}
+
+h1 {
+    font-size: 2em;
+    text-shadow: 0 2px 0 white;
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 2.5em;
+    font-size: 1.1em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1px, 1fr));
+    gap: 10px 5px;
+}
+
+@media (max-width: 712px) {
+
+    body > main,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #self-img {
+        width: 60%;
+    }
+}
