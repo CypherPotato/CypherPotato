@@ -1,7 +1,36 @@
-Breaking systems since 2014.
+```
+                     .
+                    /|      .
+             __..--' |____.'|
+           <:===(_)==|======|=>                              .
+             ''--..  |''''.'|                               /|      .
+                    \|      '                        __..--' |____.'|
+                     '                             <:===(_)==|======|=>
+                                                     ''--..  |''''.'|
+                                                            \|      '
+                              __                             '
+                            .'  |
+                          .'    |
+                        .'      |              _
+                      .'        |            .' |
+            _______..'__________|__________.'___|
+       _.-''  __         _____                  |=--.
+   <:=======[(  )]======[_____]=================|====>
+       '-.._  ''         '''''                  |=--'
+            '''''''''.__''''''''|''''''''''''.'''|    CYPHERPOTATO // GABRIEL SCATOLIN
+                      '.        |            '._|     ------------------------------------------
+                        '.      |                     > breaking systems since 2014
+                          '.    |                     > C#  .NET  PHP  JavaScript  CSS  HTML
+                            '.  |                     > author of Sisk, Cascadium, el.js
+                              ''                      > 11k+ rep on Stack Overflow em Português
+                                             .        > Project Principium  ::  Brazil
+                                            /|      .
+                                     __..--' |____.'|
+                                   <:===(_)==|======|=>
+                                     ''--..  |''''.'|
+                                            \|      '
+PROJECT PRINCIPIUM                           '
+(c) 2014 CYPHERPOTATO
+```
 
-Remarkable experience in `C#`, `PHP`, `VB.NET`, `CSS3+HTML5` and `Javascript`.
-
-Check out my [LinkedIn](https://www.linkedin.com/in/cypherpotato/), and if you want, my [Stack Overflow em Português](https://pt.stackoverflow.com/users/24529/cypherpotato) profile with more than 10K of rep too.
-
-Also, you can see the open projects I'm actually working on [here](https://github.com/CypherPotato/CypherPotato/blob/main/PROJECTS.md).
+[LinkedIn](https://www.linkedin.com/in/cypherpotato/) · [Stack Overflow em Português](https://pt.stackoverflow.com/users/24529/cypherpotato) · [Sisk](https://github.com/sisk-http/core) · [Cascadium](https://github.com/CypherPotato/cascadium)
